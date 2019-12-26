@@ -10,8 +10,9 @@ RUN yum install -y \
 
 # BCL2FASTQ v2.2
 RUN cd /tmp/ && \
-    wget -O bcl2fastq-v2.20.0.422-Linux-x86_64.rpm "https://files.softwaredownloads.illumina.com/e8ed3335-5201-48ff-a2bc-db4bfb792c85/bcl2fastq2-v2-20-0-linux-x86-64.zip?Expires=1577330614&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9maWxlcy5zb2Z0d2FyZWRvd25sb2Fkcy5pbGx1bWluYS5jb20vZThlZDMzMzUtNTIwMS00OGZmLWEyYmMtZGI0YmZiNzkyYzg1L2JjbDJmYXN0cTItdjItMjAtMC1saW51eC14ODYtNjQuemlwIiwiQ29uZGl0aW9uIjp7IkRhdGVMZXNzVGhhbiI6eyJBV1M6RXBvY2hUaW1lIjoxNTc3MzMwNjE0fX19XX0_&Signature=x7WmO88gFfgKEQJxaISDg-xKEID-C6jLnRaqpW6Q3d1EzmlCGpV3NGvM0kZ-DBLsAuTQUjro7AkhKl2olvsjswvUwqT2jkaHQk2TuKODKheeBbMJfuMr838u0fjykk7-xhH~jpLb1I1ysPOvFQ9gyRPwbMYOglY5As4ZlUg5gu90f-uI-SY~a9Ho-SlYeNqGYEBN7MQcyTjYC~SbSvcilEWbxB9iTR1PDe1ICyd5hlu130jKnczzpGloANbOa2oyRlSOFp-1o8qwNJ5NVTEmst6wSQEuuoV3RdYpRa3TmnzGsDAYJ8EslVWfxrkEcLHuXTMsO9ngy1sSXe~dfflqNQ__&Key-Pair-Id=APKAJO3UYWPXK4A26FPQ" && \
-    yum install -y bcl2fastq2-v2.20.0.422-Linux-x86_64.rpm && \
+    wget https://support.illumina.com/content/dam/illumina-support/documents/downloads/software/bcl2fastq/bcl2fastq2-v2-20-0-linux-x86-64.zip && \
+    unzip bcl2fastq2-v2-20-0-linux-x86-64.zip && \
+    yum install -y --nogpgcheck bcl2fastq2-v2.20.0.422-Linux-x86_64.rpm && \
     rm -f bcl2fastq2-v2-20-0-linux-x86-64.zip bcl2fastq2-v2.20.0.422-Linux-x86_64.rpm
 
 # cellranger v3.1
