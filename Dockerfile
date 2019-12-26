@@ -10,8 +10,7 @@ RUN yum install -y \
 
 # BCL2FASTQ v2.2
 RUN cd /tmp/ && \
-    wget https://support.illumina.com/content/dam/illumina-support/documents/downloads/software/bcl2fastq/bcl2fastq2-v2-20-0-linux-x86-64.zip && \
-    unzip bcl2fastq2-v2-20-0-linux-x86-64.zip && \
+    wget https://files.softwaredownloads.illumina.com/e8ed3335-5201-48ff-a2bc-db4bfb792c85/bcl2fastq2-v2-20-0-linux-x86-64.zip?Expires=1577330241&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9maWxlcy5zb2Z0d2FyZWRvd25sb2Fkcy5pbGx1bWluYS5jb20vZThlZDMzMzUtNTIwMS00OGZmLWEyYmMtZGI0YmZiNzkyYzg1L2JjbDJmYXN0cTItdjItMjAtMC1saW51eC14ODYtNjQuemlwIiwiQ29uZGl0aW9uIjp7IkRhdGVMZXNzVGhhbiI6eyJBV1M6RXBvY2hUaW1lIjoxNTc3MzMwMjQxfX19XX0_&Signature=m3kjN2PVUhAmogWb7olJERzkXbPE~wNH79MF1TTVz7bkH-sHiYCycGIcilSGykQNXR55nHony8qyPlYoNw5J2XWSiWISc-9KLIp6D-epF069m78ZeMn8eEOL7RCgrRjkiPpYP9gBCng3BrobcVetj1fr3V4n2XPIc92tm-sTEATjyU8~RlH-JpCz2yeobN0Xaxixno7KoKSX3hT196C-AgbflpVZaSPtc0ViqlLPxKEOjFlOrfeYqT0-btONGIExegXS2KmU1sJ4nP-GRfysyZsJIcN94pppjSL3z70jANRkTEvpmHfgETPO78I9LGCANE2XV1zymO9TrcHnjqZ04g__\&Key-Pair-Id=APKAJO3UYWPXK4A26FPQ && \
     yum install -y bcl2fastq2-v2.20.0.422-Linux-x86_64.rpm && \
     rm -f bcl2fastq2-v2-20-0-linux-x86-64.zip bcl2fastq2-v2.20.0.422-Linux-x86_64.rpm
 
